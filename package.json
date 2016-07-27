@@ -1,7 +1,7 @@
 {
   "name": "react-redux-helloworld",
   "version": "1.0.0",
-  "description": "A dummy app to learn react and redux",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,12 +16,21 @@
     "url": "https://github.com/alexung/react-redux-helloworld/issues"
   },
   "homepage": "https://github.com/alexung/react-redux-helloworld#readme",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "webpack-stream": "^3.2.0"
+  },
   "dependencies": {
+    "babel-polyfill": "^6.9.1",
+    "babel-runtime": "^6.11.6",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.2.1",
+    "react-dom": "^15.2.1",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2"
-  },
-  "devDependencies": {
-    "redux-devtools": "^3.3.1"
   }
 }
