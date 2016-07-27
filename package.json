@@ -1,0 +1,27 @@
+{
+  "name": "react-redux-helloworld",
+  "version": "1.0.0",
+  "description": "A dummy app to learn react and redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexung/react-redux-helloworld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexung/react-redux-helloworld/issues"
+  },
+  "homepage": "https://github.com/alexung/react-redux-helloworld#readme",
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.3.1"
+  }
+}
