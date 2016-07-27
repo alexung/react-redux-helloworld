@@ -8120,7 +8120,13 @@
 /* 298 */
 /***/ function(module, exports) {
 
-	
+	"use strict";
+
+	var helloWorld = "Hello World!";
+
+	console.log("" + helloWorld);
+
+	console.log('lulz');
 
 /***/ }
 /******/ ]);
