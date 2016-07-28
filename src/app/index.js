@@ -10,7 +10,6 @@ import RootReducer from './reducers';
 
 let store = createStore(RootReducer);
 
-
 let rootElement = document.getElementById('app-root');
 
 render(
@@ -19,4 +18,3 @@ render(
   </Provider>,
   rootElement
 );
-

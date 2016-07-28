@@ -27,7 +27,7 @@ class TaskList extends Component {
             <a onClick={() => this.addTask(newTask.value)}>+</a>
           </li>
           { tasks.map(task =>
-            <li key={task.id} className={ 'task.completed' ? 'task completed' : 'task'}>
+            <li key={task.id} className={ task.completed ? 'task completed' : 'task'}>
               <span onClick={() => { onCompleteTask(task) }}>[ ]</span>
               {task.text}
             </li>
