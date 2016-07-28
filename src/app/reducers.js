@@ -27,9 +27,9 @@ function addTaskReducer(state, action) {
   task.completed = false;
 
   var lastTask = state.tasks[state.tasks.length - 1];
+
   task.id = lastTask.id++;
 
-  // ... spread operator copies all of state.tasks into an arr
   return Object.assign({}, state, { tasks: [...state.tasks, task] });
 }
 
@@ -37,7 +37,7 @@ function completeTaskReducer(state, action) {
   var id = action.payload.id;
 
   return Object.assign({}, state, { tasks: state.tasks.map(task => {
-      if (id === task.id) {
+      if(id === task.id) {
         return Object.assign({}, task, { completed: true });
       }
 

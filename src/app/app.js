@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   render() {
-
     const { dispatch, habits, dailies, todos } = this.props;
 
     return (
@@ -31,19 +30,19 @@ class App extends Component {
         <section>
           <h3>Habits</h3>
           <TaskList
-            onCompleteTask= { (task) => this.handleCompleteTask(task)}
+            onCompleteTask={(task) => this.handleCompleteTask(task)}
             tasks={habits} type="habit" />
         </section>
         <section>
           <h3>Dailies</h3>
           <TaskList
-            onCompleteTask= { (task) => this.handleCompleteTask(task)}
+            onCompleteTask={(task) => this.handleCompleteTask(task)}
             tasks={dailies} type="daily" />
         </section>
         <section>
           <h3>Todos</h3>
           <TaskList
-            onCompleteTask= { (task) => this.handleCompleteTask(task)}
+            onCompleteTask={(task) => this.handleCompleteTask(task)}
             tasks={todos} type="todo" />
         </section>
       </div>

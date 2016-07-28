@@ -32470,7 +32470,7 @@
 	          tasks.map(function (task) {
 	            return _react2.default.createElement(
 	              'li',
-	              { key: task.id, className: 'task.completed' ? 'task completed' : 'task' },
+	              { key: task.id, className: task.completed ? 'task completed' : 'task' },
 	              _react2.default.createElement(
 	                'span',
 	                { onClick: function onClick() {
@@ -32547,9 +32547,9 @@
 	  task.completed = false;
 
 	  var lastTask = state.tasks[state.tasks.length - 1];
+
 	  task.id = lastTask.id++;
 
-	  // ... spread operator copies all of state.tasks into an arr
 	  return (0, _assign2.default)({}, state, { tasks: [].concat((0, _toConsumableArray3.default)(state.tasks), [task]) });
 	}
 
