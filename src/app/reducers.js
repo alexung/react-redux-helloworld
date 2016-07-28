@@ -7,9 +7,10 @@ const initialState = {
 };
 
 function rootReducer(state = initialState, action) {
+
   switch(action.type) {
     case GET_TASKS:
-      return Object.assign({}, state, {tasks: action.payload.tasks });
+      return Object.assign({}, state, { tasks: action.payload.tasks });
     case ADD_TASK:
       return addTaskReducer(state, action);
     case COMPLETE_TASK:

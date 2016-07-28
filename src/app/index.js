@@ -1,16 +1,22 @@
+import React from 'react';
+
 import { createStore } from 'redux';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+
+import App from './app';
+
 import RootReducer from './reducers';
-import { addTask } from './actions';
 
 let store = createStore(RootReducer);
 
-store.subscribe(function() {
-  console.log(store.getState());
-});
 
-// tells store there is a new action and calls it, which in this case adds a todo item
-store.dispatch(addTask('my new task', 'todo'));
+let rootElement = document.getElementById('app-root');
 
-// const helloWorld = "Hello World!";
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+);
 
-// console.log(`${helloWorld}`);
