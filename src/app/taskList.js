@@ -11,7 +11,7 @@ class TaskList extends Component {
     return (
       <ul>
         {tasks.map(task =>
-          <li class="task">
+          <li className="task">
             <span onClick={() => { onCompleteTask(task) }}>[ ]</span>
             {task.text}
           </li>

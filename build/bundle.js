@@ -32434,7 +32434,7 @@
 	        tasks.map(function (task) {
 	          return _react2.default.createElement(
 	            "li",
-	            { "class": "task" },
+	            { className: "task" },
 	            _react2.default.createElement(
 	              "span",
 	              { onClick: function onClick() {
