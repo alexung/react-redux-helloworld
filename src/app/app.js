@@ -22,6 +22,7 @@ class App extends Component {
     dispatch(completeTask(task.id));
   }
 
+  // we use className below because this is JSX, where you need className and not just 'class'
   render() {
     const { dispatch, habits, dailies, todos } = this.props;
 

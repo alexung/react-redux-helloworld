@@ -30700,6 +30700,9 @@
 
 	      dispatch((0, _actions.completeTask)(task.id));
 	    }
+
+	    // we use className below because this is JSX, where you need className and not just 'class'
+
 	  }, {
 	    key: 'render',
 	    value: function render() {
