@@ -30714,7 +30714,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'container' },
 	        _react2.default.createElement(
 	          'section',
 	          null,
@@ -32338,7 +32338,7 @@
 	}, {
 	  id: 3,
 	  type: 'todo',
-	  text: 'Finish redux tutorial',
+	  text: 'Finish Redux tutorial',
 	  completed: false
 	}, {
 	  id: 4,
@@ -32380,7 +32380,7 @@
 /* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -32410,6 +32410,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRedux = __webpack_require__(483);
+
+	var _actions = __webpack_require__(579);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var TaskList = function (_Component) {
@@ -32421,37 +32425,74 @@
 	  }
 
 	  (0, _createClass3.default)(TaskList, [{
-	    key: "render",
-	    value: function render() {
+	    key: 'addTask',
+	    value: function addTask(taskText) {
 	      var _props = this.props;
-	      var onCompleteTask = _props.onCompleteTask;
-	      var tasks = _props.tasks;
+	      var dispatch = _props.dispatch;
+	      var type = _props.type;
 
+
+	      dispatch((0, _actions.addTask)(taskText, type));
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var _props2 = this.props;
+	      var onCompleteTask = _props2.onCompleteTask;
+	      var tasks = _props2.tasks;
+	      var type = _props2.type;
+
+
+	      var newTask = void 0;
 
 	      return _react2.default.createElement(
-	        "ul",
+	        'div',
 	        null,
-	        tasks.map(function (task) {
-	          return _react2.default.createElement(
-	            "li",
-	            { "class": "task" },
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'task-list' },
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'task' },
+	            _react2.default.createElement('input', { type: 'text', ref: function ref(node) {
+	                newTask = node;
+	              } }),
 	            _react2.default.createElement(
-	              "span",
+	              'a',
 	              { onClick: function onClick() {
-	                  onCompleteTask(task);
+	                  return _this2.addTask(newTask.value);
 	                } },
-	              "[ ]"
-	            ),
-	            task.text
-	          );
-	        })
+	              '+'
+	            )
+	          ),
+	          tasks.map(function (task) {
+	            return _react2.default.createElement(
+	              'li',
+	              { key: task.id, className: 'task.completed' ? 'task completed' : 'task' },
+	              _react2.default.createElement(
+	                'span',
+	                { onClick: function onClick() {
+	                    onCompleteTask(task);
+	                  } },
+	                '[ ]'
+	              ),
+	              task.text
+	            );
+	          })
+	        )
 	      );
 	    }
 	  }]);
 	  return TaskList;
 	}(_react.Component);
 
-	exports.default = TaskList;
+	function select(state) {
+	  return {};
+	};
+
+	exports.default = (0, _reactRedux.connect)(select)(TaskList);
 
 /***/ },
 /* 581 */

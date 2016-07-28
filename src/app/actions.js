@@ -18,7 +18,7 @@ const tasks = [
   {
     id: 3,
     type: 'todo',
-    text: 'Finish redux tutorial',
+    text: 'Finish Redux tutorial',
     completed: false
   },
   {

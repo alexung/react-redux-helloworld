@@ -27,7 +27,7 @@ class App extends Component {
     const { dispatch, habits, dailies, todos } = this.props;
 
     return (
-      <div>
+      <div className="container">
         <section>
           <h3>Habits</h3>
           <TaskList
